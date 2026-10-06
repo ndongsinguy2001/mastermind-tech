@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import portraitUrl from '../assets/images/portrait.png';
 
 const PortraitImage = ({ isMobile }) => {
   const portraitRef = useRef();
@@ -11,8 +10,9 @@ const PortraitImage = ({ isMobile }) => {
 
   useEffect(() => {
     const loader = new THREE.TextureLoader();
+    // Utilisation de /portrait.png servi depuis public/
     loader.load(
-      portraitUrl,
+      '/portrait.png',
       (loadedTexture) => {
         loadedTexture.colorSpace = THREE.SRGBColorSpace;
         loadedTexture.anisotropy = 8;
@@ -51,6 +51,7 @@ const PortraitImage = ({ isMobile }) => {
     }
   });
 
+  // Si erreur ou pas encore chargé, ne rien afficher
   if (error || !texture) return null;
 
   const imageAspect = texture.image
