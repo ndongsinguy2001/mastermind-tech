@@ -27,7 +27,7 @@ const Portfolio = () => {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.article
               key={project.id}
               variants={staggerItem}
@@ -41,6 +41,8 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (

@@ -9,7 +9,6 @@ const PortraitImage = ({ isMobile }) => {
   const [texture, setTexture] = useState(null);
   const [error, setError] = useState(false);
 
-  // Chargement manuel de la texture avec gestion d'erreur
   useEffect(() => {
     const loader = new THREE.TextureLoader();
     loader.load(
@@ -31,13 +30,11 @@ const PortraitImage = ({ isMobile }) => {
   useFrame((state) => {
     const t = state.clock.elapsedTime;
 
-    // Flottement de la photo
     if (portraitRef.current) {
       portraitRef.current.position.y = Math.sin(t * 0.6) * 0.05;
       portraitRef.current.rotation.z = Math.sin(t * 0.4) * 0.01;
     }
 
-    // Parallaxe avec la souris
     if (groupRef.current) {
       const pointerX = state.pointer.x * 0.15;
       const pointerY = state.pointer.y * 0.15;
@@ -54,10 +51,8 @@ const PortraitImage = ({ isMobile }) => {
     }
   });
 
-  // Si erreur ou pas encore chargé, ne rien afficher
   if (error || !texture) return null;
 
-  // Calcul du ratio pour éviter la déformation
   const imageAspect = texture.image
     ? texture.image.width / texture.image.height
     : 0.75;

@@ -14,7 +14,7 @@ export const agencyInfo = {
   whatsapp: "+221777046210",
   phoneDisplay: "+221 77 704 62 10",
   
-  // Réseaux sociaux (⚠️ À REMPLACER par vos vraies URLs)
+  // Réseaux sociaux
   linkedin: "https://www.linkedin.com/in/singuy-ndong-97a7b32a0",
   github: "https://github.com/ndongsinguy2001",
   
@@ -127,7 +127,7 @@ export const technologies = [
 ];
 
 // ============================================================
-// PORTFOLIO (VRAIS PROJETS)
+// PORTFOLIO (VRAIS PROJETS) - Images dans public/
 // ============================================================
 export const projects = [
   {
@@ -136,7 +136,7 @@ export const projects = [
     category: "Application RH",
     description: "Plateforme de gestion des ressources humaines déployée dans toutes les filiales d'Inclusive Guarantee (Sénégal, Côte d'Ivoire, Mali, Burkina Faso). Suivi des présences, absences, congés et activités du personnel.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/src/assets/images/projects/rh-inclusive.png",
+    image: "/images/projects/rh-inclusive.png",
     link: "https://rh-inclusive-garantee.netlify.app/login?country=senegal",
     isPlaceholder: false,
   },
@@ -146,7 +146,7 @@ export const projects = [
     category: "Plateforme Métier",
     description: "Solution de gestion des reportings pour Inclusive Guarantee Sénégal : suivi des contrats, bordereaux, encaissements et génération de rapports d'activité.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/src/assets/images/projects/reportings-igsn.png",
+    image: "/images/projects/reportings-igsn.png",
     link: "https://reportings-igsn-frontend.netlify.app/login",
     isPlaceholder: false,
   },
@@ -156,7 +156,7 @@ export const projects = [
     category: "Plateforme Métier",
     description: "Plateforme de reporting pour le Cabinet de Conseil en Assurance (CCA) : centralisation des données, suivi des dossiers et génération de rapports d'activité.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/src/assets/images/projects/reportings-cca.png",
+    image: "/images/projects/reportings-cca.png",
     link: "https://reportings-cca-sn.netlify.app/login",
     isPlaceholder: false,
   },
@@ -166,7 +166,7 @@ export const projects = [
     category: "Application de Gestion",
     description: "Application de gestion pour Laye Déco, entreprise de décoration d'événements au Sénégal : pointages du personnel, suivi des activités et gestion opérationnelle.",
     tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/src/assets/images/projects/laye-deco.png",
+    image: "/images/projects/laye-deco.png",
     link: "https://laye-deco-platform.netlify.app/login",
     isPlaceholder: false,
   },

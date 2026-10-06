@@ -11,10 +11,12 @@ const CTA = () => {
     >
       {/* ====== PHOTO EN ARRIÈRE-PLAN (assombrie) ====== */}
       <div className="absolute inset-0 z-0">
-        {/* Photo */}
+        {/* Photo - servie depuis public/ */}
         <img
-          src="/src/assets/images/hero.jpg"
+          src="/hero.png"
           alt="Fondateur MasterMind.tech"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center opacity-20"
         />
         
